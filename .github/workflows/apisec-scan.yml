@@ -52,13 +52,4 @@ jobs:
       security-events: write # for github/codeql-action/upload-sarif to upload SARIF results
       actions: read # only required for a private repository by github/codeql-action/upload-sarif to get the Action run status
     runs-on: ubuntu-latest
-
- 
-      steps:
-  - name: APIsec scan
-    uses: apisec-inc/apisec-run-scan@025432089674a28ba8fb55f8ab06c10215e772ea
-    with:
-      apisec-username: ${{ secrets.apisec_username }}
-      apisec-password: ${{ secrets.apisec_password }}
-      apisec-project: "VAmPI"
-      sarif-result-file: "apisec-results.sarif"
+[![.github/workflows/apisec-scan.yml](https://github.com/dreammy1/opensource-casino-vr/actions/workflows/apisec-scan.yml/badge.svg?branch=dependabot%2Fnpm_and_yarn%2Fback%2Fnpm_and_yarn-0ceaac6bfc&event=deployment)](https://github.com/dreammy1/opensource-casino-vr/actions/workflows/apisec-scan.yml)
